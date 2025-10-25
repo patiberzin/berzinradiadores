@@ -6,12 +6,18 @@
   font-family: "Roboto", sans-serif;
 }
 
-body {
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background-image: url('bg.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
   background-size: cover;
+  z-index: -1;
 }
 
 .top-color {
