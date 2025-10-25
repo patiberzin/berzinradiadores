@@ -82,13 +82,62 @@ body::before {
   text-shadow: 2px 2px 4px rgba(0,0,0,0.35);
 }
 
+.btn-container {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-telefones {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #f9b202;
+  border-radius: 5px;
+  min-width: 220px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu-telefones.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-telefones a {
+  display: block;
+  padding: 12px 16px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-telefones a:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+.separator {
+  height: 3px;
+  background-color: #f9b202;
+  margin: 0;
+}
+
 .btn {
-  padding: 16px 95px;
+  padding: 16px 90px;
   background-color: #f9b202;
   color: #000;
   font-weight: bold;
   border-radius: 5px;
   margin-top: 16px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
 }
 
 .btn:hover, .btn:focus {
@@ -100,6 +149,7 @@ body::before {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.05); }
 }
+
 .btn.pulse {
   animation: pulse 2s infinite;
 }
